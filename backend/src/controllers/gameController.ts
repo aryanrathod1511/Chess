@@ -11,7 +11,8 @@ export class GameController {
         return;
       }
 
-      const gameData = GameService.findOrCreateGame(playerId);
+      const dummySocket: any = {}; 
+      const gameData = GameService.findOrCreateGame(playerId, dummySocket);
       res.status(200).json(gameData);
     } catch (error) {
       res.status(500).json({ error: "Internal server error" });

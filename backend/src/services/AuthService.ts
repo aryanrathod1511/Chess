@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import {PrismaClient} from "@prisma/client";
-import {User} from "@prisma/client";
+//import {User} from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -10,7 +10,7 @@ class AuthService {
     //register user
     static async registerUser(name : string, email:string, password: string){
         //check if user exist
-        const existingUser:User | null = await prisma.user.findUnique({where: {email}});
+        const existingUser= await prisma.user.findUnique({where: {email}});
 
         if(existingUser){
             throw new Error("User already exists with this email!");
@@ -21,7 +21,7 @@ class AuthService {
 
         //creat user in DB
 
-        const user: User|null = await prisma.user.create({
+        const user = await prisma.user.create({
             data : {
                 name, email, password: hashedPassword,
             }
@@ -37,7 +37,7 @@ class AuthService {
     static async loginUser(email: string, password: string){
         //check if user exists
 
-        const user: User|null = await prisma.user.findUnique({where : {email}});
+        const user= await prisma.user.findUnique({where : {email}});
 
         if(!user){
             throw new Error("User not found!");
