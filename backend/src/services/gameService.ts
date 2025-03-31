@@ -71,6 +71,7 @@ export class GameService {
         else drawReason = "Game draw";
       }
     }
+    const isCheck = game.isCheck();
   
     gameData.turn = game.turn() === "w" ? players.white : players.black;
   
@@ -84,6 +85,7 @@ export class GameService {
       winner,
       isDraw,
       drawReason,
+      isCheck,
     };
   
     sockets.white.send(JSON.stringify(gameUpdate));
