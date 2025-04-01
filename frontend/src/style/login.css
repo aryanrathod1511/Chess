@@ -1,0 +1,182 @@
+/* Styling for the Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .login-form {
+    width: 50vw;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+    padding: 30px;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+  }
+  
+  .login-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .login-subtitle {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Common Button Styles */
+  .google-login-btn {
+    margin-top: 50px;
+  }
+  
+  .google-login-btn,
+  .submit-btn {
+    width: 100%;
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    gap: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Hover effect for both buttons */
+  .google-login-btn:hover,
+  .submit-btn:hover {
+    background-color: #333333; /* Slightly Lighter Gray */
+    border-color: #ffffff; /* White Border */
+    transform: translateY(-3px); /* Lift the button on hover */
+  }
+  
+  /* Add Animated Arrow for both buttons */
+  .google-login-btn::after,
+  .submit-btn::after {
+    font-size: 20px;
+    transition: transform 0.5s ease;
+  }
+  
+  .google-login-btn:hover::after,
+  .submit-btn:hover::after {
+    transform: translateX(5px); /* Moves the arrow on hover */
+  }
+  
+  /* Button Press Effect for both buttons */
+  .google-login-btn:active,
+  .submit-btn:active {
+    background-color: #222222;
+    transform: translateY(2px); /* Pressed effect */
+  }
+  
+  /* Icon styling for both buttons */
+  .google-login-btn i,
+  .submit-btn-btn i {
+    font-size: 20px;
+  }
+  
+  /* Image styling for both buttons */
+  .google-login-btn img,
+  .submit-btn img {
+    width: 20px;
+    height: auto;
+  }
+  
+  
+  .divider-text {
+    text-align: center;
+    margin: 10px 10;
+    position: relative;
+  }
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    border-radius: 15px;
+    background-color: #333333;
+    font-size: 16px;
+    color: #ffffff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  input::placeholder {
+    color: #bbb;
+    opacity: 1;
+  }
+  
+  input:focus {
+    background-color: #444444;
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  input:focus::placeholder {
+    color: #ddd;
+  }
+  
+  .error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #222222;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-center a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .text-center a:hover {
+    text-decoration: underline;
+  }
+  

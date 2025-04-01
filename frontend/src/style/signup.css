@@ -1,92 +1,196 @@
-/* Signup page occupies 50% of viewport width */
-.signup-page {
-    width: 50vw; /* 50% of the viewport width */
-    height: 60vh; /* 60% of the viewport height */
-    /* display: flex;*/
-    justify-content: center;
-    align-items: center; 
-    /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
-    background-size: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-  }
-  
-  /* Signup container inside the signup page */
-  .signup-container {
-    width: 100%; /* Container takes the full width of the signup page */
-    height: auto; /* Adjust height dynamically */
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 4%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Input Fields */
-  .form-control {
-    width: 100%; /* Full width of the container */
-    height: 3vw;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-  }
-  
-  /* Placeholder text color */
-  .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  /* Signup Button */
-  .signup-btn {
-    background-color: #1f1f1f; /* Dark Gray */
-    color: white;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    border: 2px solid #4a4a4a;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-  }
-  
-  .signup-btn:hover {
-    background-color: #333333; /* Slightly lighter gray */
-    border-color: #ffffff;
-    transform: translateY(-3px);
-  }
-  
-  /* Google Signup Button */
-  .google-signup-btn {
-    background-color: #db4437; /* Google red */
-    color: white;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    border: 2px solid #ffffff;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .google-signup-btn:hover {
-    background-color: #c1351d; /* Darker red for hover effect */
-  }
-  
-  /* Google icon and text */
-  .google-signup-btn img {
-    width: 20px; /* Adjust icon size */
-    height: 20px;
-  }
-  
+/* Styling for the Signup Page */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  position: relative;
+}
+
+.signup-form {
+  width: 50vw;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+  padding: 30px;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.signup-title {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.signup-subtitle {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Common Button Styles */
+.google-signup-btn{
+  margin-top:50px;
+}
+.google-signup-btn,
+.submit-btn {
+  width: 100%;
+  background-color: #1f1f1f;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  gap: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for both buttons */
+.google-signup-btn:hover,
+.submit-btn:hover {
+  background-color: #333333; /* Slightly Lighter Gray */
+  border-color: #ffffff; /* White Border */
+  transform: translateY(-3px); /* Lift the button on hover */
+}
+
+/* Add Animated Arrow for both buttons */
+.google-signup-btn::after,
+.submit-btn::after {
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+.google-signup-btn:hover::after,
+.submit-btn:hover::after {
+  transform: translateX(5px); /* Moves the arrow on hover */
+}
+
+/* Button Press Effect for both buttons */
+.google-signup-btn:active,
+.submit-btn:active {
+  background-color: #222222;
+  transform: translateY(2px); /* Pressed effect */
+}
+
+/* Icon styling for both buttons */
+.google-signup-btn i,
+.submit-btn-btn i {
+  font-size: 20px;
+}
+
+/* Image styling for both buttons */
+.google-signup-btn img,
+.submit-btn img {
+  width: 20px;
+  height: auto;
+}
+
+
+.divider-text {
+  text-align: center;
+  margin: 10px 10;
+  position: relative;
+}
+
+/* .divider-text:before,
+.divider-text:after {
+  content: "";
+  position: absolute;
+  width: 45%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 1px solid #ccc;
+}
+
+.divider-text span {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 10px;
+  color: white;
+} */
+
+.form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  border-radius: 15px;
+  background-color: #333333; 
+  font-size: 16px;
+  color: #ffffff; 
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input::placeholder {
+  color: #bbb; 
+  opacity: 1; 
+}
+
+input:focus {
+  background-color: #444444; 
+  outline: none;
+  border-color: #3498db; 
+}
+
+input:focus::placeholder {
+  color: #ddd; 
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #222222;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
+}
