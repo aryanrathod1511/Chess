@@ -1,0 +1,52 @@
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker header background */
+    color: #00d4ff; /* Light Cyan for header text */
+    padding: 15px 20px;
+    text-align: left;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Set size for the title */
+    font-weight: bold;
+    color: #00d4ff; /* Light Cyan title color */
+}
+
+/* Authentication Button Styling */
+.auth {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.button {
+    background-color: #1f1f1f; /* Dark Gray button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #4a4a4a; /* Subtle border */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover Effect */
+/* Header Button Hover Effect */
+.button:hover {
+    background-color: #333333; /* Lighter Dark Gray */
+    transform: translateY(-4px);
+    border-color: #ffffff;  /* Light Cyan border on hover */
+}
+
+

@@ -1,0 +1,105 @@
+/* Layout for the main content */
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden; /* Prevents any movement */
+}
+.image {
+  width: 50%; 
+  height: auto;
+  border-radius: 15px; 
+  object-fit: cover; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Left Section - Fixed Position */
+.left-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 0; 
+  padding-left: 10%;
+  position: relative; 
+}
+
+
+
+/* Right Section - Locked to Right */
+.right-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10%;
+}
+
+.right-section img {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.left-section h2 {
+  font-size: 3.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+/* Fancy Get Started Button */
+.get-started-btn {
+  background-color: #1f1f1f; /* Dark Gray */
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid #4a4a4a; /* Subtle Gray Border */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Button Hover Effect */
+.get-started-btn:hover {
+  background-color: #333333; /* Slightly Lighter Gray */
+  border-color: #ffffff; /* White Border */
+  transform: translateY(-3px);
+}
+
+/* Add Animated Arrow */
+.get-started-btn::after {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.get-started-btn:hover::after {
+  transform: translateX(5px); /* Moves the arrow on hover */
+}
+
+/* Button Press Effect */
+.get-started-btn:active {
+  background-color: #222222;
+  transform: translateY(2px);
+}

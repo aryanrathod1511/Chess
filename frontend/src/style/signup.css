@@ -1,0 +1,92 @@
+/* Signup page occupies 50% of viewport width */
+.signup-page {
+    width: 50vw; /* 50% of the viewport width */
+    height: 60vh; /* 60% of the viewport height */
+    /* display: flex;*/
+    justify-content: center;
+    align-items: center; 
+    /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+  
+  /* Signup container inside the signup page */
+  .signup-container {
+    width: 100%; /* Container takes the full width of the signup page */
+    height: auto; /* Adjust height dynamically */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 4%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Input Fields */
+  .form-control {
+    width: 100%; /* Full width of the container */
+    height: 3vw;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  /* Placeholder text color */
+  .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Signup Button */
+  .signup-btn {
+    background-color: #1f1f1f; /* Dark Gray */
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #4a4a4a;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .signup-btn:hover {
+    background-color: #333333; /* Slightly lighter gray */
+    border-color: #ffffff;
+    transform: translateY(-3px);
+  }
+  
+  /* Google Signup Button */
+  .google-signup-btn {
+    background-color: #db4437; /* Google red */
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .google-signup-btn:hover {
+    background-color: #c1351d; /* Darker red for hover effect */
+  }
+  
+  /* Google icon and text */
+  .google-signup-btn img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+  }
+  
